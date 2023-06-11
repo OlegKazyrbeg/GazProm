@@ -1,0 +1,1671 @@
+@import 'swiper.css';
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    color: black;
+    background: none;
+    font-family: 'Roboto';
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: rgb(248, 248, 248);
+    overflow-x: hidden;
+}
+
+/* хеадер мейн */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header__main {
+    font-weight: 300;
+}
+
+.header__main__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+.header__main__list {
+    display: flex;
+}
+
+.header__main__list__item {
+    margin-right: 25px;
+    font-size: 18px;
+    color: white;
+}
+
+.header__main__list__item a{
+    color: white;
+}
+
+.header__main__list__item:hover a,
+.header__main__list__item:hover{
+    color: rgba(255, 255, 255, 0.623)
+}
+
+.header__main__list__item.link a{
+    color: white;
+    font-size: 16px;
+}
+
+.header__main__list__item.link{
+    position: relative;
+    cursor: pointer;
+}
+
+.header__main__list__item:last-child{
+    margin: 0;
+}
+
+.header__main__list__link {
+    background: #004aa5d3;
+    opacity: 0;
+    position: absolute;
+    width: 500px;
+    z-index: 1;
+}
+
+.header__main__list__link__item{
+    padding: 15px;
+}
+
+.header__main__list__link__item a{
+    display: block;
+    width: 100%;
+}
+
+.header__main__list__link__item:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.header__main__list__item.link:hover .header__main__list__link{
+    opacity: 1;
+}
+
+.header__main__tel {
+    text-decoration: underline;
+    color: white;
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+/* хай мейн */
+.hi {
+    text-align: center;
+    margin: auto 0;
+    transform: translateY(-80px);
+}
+
+.hi img{
+    width: 500px;
+    margin-bottom: 50px;
+}
+
+.hi__title {
+    font-size: 45px;
+    font-weight: 500;
+    color:white
+}
+
+/* футер мейн */
+.footer__main {
+
+    margin-top: auto;
+}
+
+.footer__main__content{
+    font-weight: 300;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 15px 0;
+}
+
+.footer__main__text {
+    text-align: center;
+    color: white;
+}
+
+.footer__main__text a{
+    color: #006BB6;
+}
+
+.footer__main__text a:hover{
+    text-decoration: underline;
+}
+
+/* навигация контактная инфа */
+.wrapper__contact{
+    background: url('../img/circle-scatter-haikei.svg') no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.back__link {
+    text-align: right;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.back__link a{
+    color: #006BB6;
+}
+
+.back__link a:hover{
+    text-decoration: underline;
+}
+
+.header__contact {
+    padding: 15px 0;
+    margin-bottom: 0px;
+}
+
+.header__contact__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__contact__list {
+    display: flex;
+}
+
+.header__contact__list__item {
+    font-weight: 300;
+    font-size: 18px;
+    margin-right: 25px;
+}
+
+.header__contact__list__item:hover a{
+    color: rgba(0, 0, 0, 0.603);
+}
+
+.header__contact__list__item:last-child a{
+    margin: 0;
+    cursor: text;
+}
+
+.header__contact__list__item:last-child a{
+    color: #006BB6;
+}
+
+/* мейн контакты */
+.main__contact {
+    padding-top: 83px;
+}
+
+.contact__info {
+    margin-bottom: 45px;
+}
+
+.main__contact__title {
+    font-size: 42px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.contact__info__text {
+    margin-bottom: 35px;
+}
+
+.contact__text {
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.contact__text:last-child{
+    margin: 0;
+}
+
+.contact__text.email a {
+    color: #006BB6;
+    text-decoration: underline;
+}
+
+.contact__info__map iframe {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px -5px #006ab63d;
+}
+
+/* как проехать к офису */
+.contact__navigation {
+    margin-bottom: 30px;
+}
+
+.contact__navigation__btns {
+    margin-bottom: 20px;
+}
+.contact__navigation__btn {
+    font-weight: 300;
+    font-size: 16px;
+    margin-right: 30px;
+    cursor: pointer;
+    text-decoration: underline;
+    color: #006BB6;
+    padding: 10px 20px;
+}
+
+.contact__navigation__btn.active{
+    background: #4b78ad;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+.tabs__item{
+    display: none;
+}
+
+.tabs__active{
+    display: block;
+}
+
+.contact__navigation__title {
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.contact__navigation__transport {
+    font-weight: 300;
+}
+
+.navigation__transport__text {
+    margin-bottom: 5px;
+}
+
+.navigation__transport__list__item {
+    margin-bottom: 10px;
+}
+
+.navigation__transport__list__item:before{
+    content: "— ";
+    font-weight: 400;
+    left: 0;
+}
+
+.contact__navigation__car {
+    font-weight: 300;
+}
+
+.navigation__car__list__item{
+    width: 60%;
+}
+
+.navigation__car__list__item * {
+    margin-bottom: 10px;
+}
+
+.navigation__car__list__item__title {
+    font-weight: bold;
+}
+
+.navigation__car__list__item__paragraph {
+    line-height: 1.5;
+}
+
+/* фото офиса */
+.photo__office {
+    margin-bottom: 150px;
+}
+
+.photo__office__title {
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.photo__office img{
+    box-shadow: 0 15px 30px -5px #006ab63d;
+    border-radius: 10px;
+    transition: .2s;
+}
+
+.photo__office img:hover{
+    transform: scale(1.01);
+}
+
+/* ссылки на соц */
+.social__link {
+    margin-bottom: 30px;
+}
+
+.social__link__content{
+    display: flex;
+    align-items: center;
+}
+
+.social__link__text {
+    font-weight: 300;
+    margin-right: 15px;
+}
+
+.social__link__list {
+    display: flex;
+}
+
+.social__link__list__item {
+    margin-right: 20px;
+}
+
+/* футер контакты */
+.footer__contact {
+    font-weight: 300;
+    margin-top: auto;
+}
+
+.footer__contact__text {
+    line-height: 1.5;
+    padding: 15px 0;
+    border-top: 1px solid #e1e1e1;
+}
+
+/* навигация на кубани */
+.wrapper__nakunani{
+    background: url('../img/layered-waves-haikei-nakubani.svg') no-repeat;
+    background-position: bottom;
+    background-size:cover;
+}
+
+.header__nakubani {
+    padding: 15px 0;
+    background: linear-gradient(#1b385a57, #1b385a48), url('../img/nakubani-back2.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.header__nakubani__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25vh;
+}
+
+.header__nakubani__list {
+    display: flex;
+}
+
+.header__nakubani__list__item {
+    font-weight: 300;
+    font-size: 18px;
+    margin-right: 25px;
+}
+
+.header__nakubani__list__item a{
+    color: white
+}
+
+.header__nakubani__list__item a:hover{
+    color: rgba(255, 255, 255, 0.623)
+}
+
+.header__nakubani__list__item:last-child{
+    margin: 0;
+}
+
+.header__nakubani__title {
+    text-align: right;
+    color: white;
+    font-size: 92px;
+    transform: translateY(-50px);
+}
+
+/* мейн на кубани */
+.banners__nakubani__content{
+    display: flex;
+}
+
+.banners__nakubani {
+    margin: -150px 200px 0 0;
+}
+
+.banner__nakubani__block {
+    background: #004aa5d3;
+    backdrop-filter: blur(4px);
+    height: 270px;
+    width: calc(25% - 18px);
+    min-width: 362px;
+    padding: 25px 30px;
+    margin: 0px 18px 0px 0;
+}
+
+.banner__nakubani__title{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.397);
+    margin-bottom: 10px;
+}
+
+.banner__nakubani__title a {
+    color: white;
+    font-size: 24px;
+}
+
+.banner__nakubani__title:hover a{
+    color: rgba(255, 255, 255, 0.623);
+}
+
+.banner__nakubani__list {
+    line-height: 1.5;
+}
+
+.banner__nakubani__list__item{
+    font-weight: 300;
+    color: white;
+}
+
+/* мейн на кубани */
+.events {
+    margin-top: 90px;
+}
+
+.events__row{
+    /* display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);    
+    grid-column-gap: 50px;
+}
+
+.events__title {
+    font-size: 22px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #919191;
+    display: inline-block;
+}
+
+.events__block {
+    font-weight: 300;
+    margin-bottom: 100px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+}
+
+.events__block:nth-child(1){
+    grid-column: 1/3;
+}
+
+.events__block:nth-child(2){
+    grid-column: 1/3;
+    grid-row: 3/3;
+}
+
+.events__block:nth-child(5){
+    align-self: center;
+    grid-column: 3/3;
+    grid-row: 1/1;
+}
+.events__block:nth-child(4){
+    align-self: center;
+    grid-column: 1/1;
+    grid-row: 2/2;
+}
+
+.events__block:nth-child(3){
+    grid-column: 2/4;
+}
+
+.events__block img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.events__data {
+    color: #828282;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.events__block__name {
+    font-size: 22px;
+    line-height: 1.5;
+    color: #006BB6;
+    margin-bottom: 15px;
+}
+
+.events__text {
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* футер на кубани */
+.footer__nakubani {
+    margin-top: auto;
+}
+
+.footer__nakubani__text {
+    line-height: 1.5;
+    padding: 15px 0;
+    color: white;
+    font-weight: 300;
+    border-top: 1px solid rgba(255, 255, 255, 0.25)
+}
+
+.footer__nakubani__text a{
+    color: #b9b9b9;
+}
+
+.footer__nakubani__text a:hover{
+    text-decoration: underline;
+}
+
+/* хеадер ассоциации */
+.wrapper__association{
+    background: url('../img/layered-waves-haikei.svg') no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.header__association {
+    padding: 15px 0;
+    margin-bottom: 100px;
+}
+
+.header__association__row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__association__list {
+    display: flex;
+}
+.header__association__list__item {
+    margin-right: 25px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.header__association__list__item a:hover{
+    color: rgba(0, 0, 0, 0.603);
+}
+
+.header__association__list__item:first-child{
+    color:#006BB6;
+}
+
+/* мейн ассоциации */
+.main__association,
+.footer__association {
+    font-weight: 300;
+}
+
+.main__association{
+    margin-bottom: 30px;
+}
+
+.association{
+    margin-bottom: 150px;
+}
+
+.association__title {
+    font-size: 42px;
+    font-weight: 500;
+}
+
+.main__managment{
+    padding-top: 83px;
+}
+
+.management {
+    padding: 30px 0 40px 0;
+}
+
+.management a{
+    font-size: 14px;
+    color: #006BB6;
+}
+
+.management a:hover{
+    text-decoration: underline;
+}
+
+.association__text__list{
+    margin-left: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+.association__text__paragraph,
+.association__text__list__name {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.association__text__paragraph{
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+}
+
+.association__text__list__name{
+    margin-bottom: 5px;
+}
+
+.association__text__list__item{
+    margin-bottom: 10px;
+}
+
+.association__text__list__item.second{
+    color: black;
+}
+
+.association__text__list__item:before{
+    content: "— ";
+    font-weight: 400;
+    left: 0;
+}
+
+.association__social__text {
+    align-items: center;
+    display: flex;
+    color: white;
+}
+
+.association__social__list {
+    display: flex;
+    margin-left: 15px;
+}
+
+.assocition__social__list__item {
+    margin-right: 20px;
+}
+
+/* футер ассоциации*/
+.footer__association {
+    margin-top: auto;
+}
+
+.footer__association__text {
+    line-height: 1.5;
+    padding: 15px 0;
+    color: white;
+    font-weight: 300;
+    border-top: 1px solid rgba(255, 255, 255, 0.25)
+}
+
+.footer__association__text a{
+    color: #b9b9b9;
+}
+
+.footer__association__text a:hover{
+    text-decoration: underline;
+}
+
+/* руководители хеадер */
+.wrapper.managment {
+    /* background-color: #F8f8f8;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23ccdbed' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%2399b6db' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%236692c9' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23336db7' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%230049A5' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover; */
+
+    background: url('../img/layered-waves-haikei.svg') no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+    /* background-color: #F8F8F8;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%234978b0' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%230056b6' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%233d77ba' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%230058b7' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%232772c8' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%230050a9' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23256ab3' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%2300459d' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%231a70bf' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23005abb' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%230061b3' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23004eaa' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover; */
+}
+
+.header__managment__row{
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__managment__list {
+    display: flex;
+}
+
+.header__managment__list__item {
+    font-size: 18px;
+    font-weight: 300;
+    margin-right: 25px;
+}
+
+.header__managment__list__item:hover a {
+    color: rgba(0, 0, 0, 0.603);
+}
+
+.header__managment__list__item:last-child{
+    margin: 0;
+}
+
+.header__managment__list__item:first-child{
+    color: #006BB6;
+}
+
+/* мейн руководство */
+.managment__info {
+    margin-bottom: 150px;
+}
+
+.managment__info__title {
+    font-size: 42px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.managment__info__row {
+    display: flex;
+}
+
+.managmnet__info__img {
+    align-self: start;
+}
+
+.managmnet__info__text {
+    margin-left: 30px;
+}
+
+.managmnet__info__text p{
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+    font-weight: 300;
+    line-height: 1.5;
+    display: inline-block;
+}
+
+.managmnet__info__text p:last-child span{
+    display: block;
+    color: #828282;
+    font-size: 22px;
+}
+
+.managmnet__info__text p:last-child{
+    font-size: 18px;
+}
+
+.managmnet__info__text p:first-child{
+    font-size: 22px;
+}
+
+/* руководство ссылки */
+.managment__social {
+    margin-bottom: 30px;
+}
+
+.managment__social__text {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 300;
+}
+
+.managment__social__list {
+    display: flex;
+    margin-left: 15px;
+}
+
+.managment__social__list__item {
+    margin-right: 20px;
+}
+
+.managment__social__list__item:last-child{
+    margin: 0;
+}
+
+/* футер руководство */
+.footer__managment__text {
+    padding: 15px 0;
+    color: white;
+    font-weight: 300;
+    border-top: 1px solid rgba(255, 255, 255, 0.25)
+}
+
+.footer__managment__text a{
+    color: #b9b9b9;
+}
+
+.footer__managment__text:hover a{
+    text-decoration:underline;
+}
+
+/* хеадер проекты */
+.wrapper__project{
+    background: url('../img/layered-waves-haikei.svg') no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.header__project {
+    padding: 15px 0;
+    margin-bottom: 100px;
+}
+
+.header__project__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__project__list {
+    display: flex;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.header__project__list__item {
+    margin-right: 25px;
+}
+
+.header__project__list__item a:hover{
+    color: rgba(0, 0, 0, 0.603);
+}
+
+.header__project__list__item:nth-child(2){
+    color: #006BB6;
+}
+
+.header__project__list__item:last-child{
+    margin: 0;
+}
+
+/* мейн проекты */
+.projects {
+    margin-bottom: 150px;
+}
+
+.projects__title {
+    font-size: 42px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.projects___row {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    font-weight: 300;
+}
+
+.project__card {
+    line-height: 1.5;
+    width: calc(50% - 100px);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+}
+
+.project__card__img{
+    overflow: hidden;
+    height: 80%;
+    border-top-left-radius:10px;
+    border-top-right-radius: 10px;
+}
+
+.project__card__img img{
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+
+.project__card:hover .project__card__img img{
+    transform: scale(1.05);
+}
+
+.project__card__paragraph {
+    color: #006BB6;
+    padding: 15px 20px 20px 20px;
+}
+
+.project__card__paragraph:hover{
+    text-decoration: underline;
+}
+
+/* проекты соц */
+.project__social {
+    margin-bottom: 30px;
+}
+
+.project__social__text {
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    color: white;
+}
+
+.project__social__list {
+    display: flex;
+    margin-left: 15px;
+}
+
+.project__social__list__item {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.project__social__list__item:last-child{
+    margin: 0;
+}
+
+/* проекты футер */
+.footer__project {
+    margin-top: auto;
+}
+
+.footer__project__text {
+    padding: 15px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    font-weight: 300;
+    line-height: 1.5;
+    color: white;
+}
+
+.footer__project__text a{
+    color: #b9b9b9;
+}
+
+.footer__project__text a:hover{
+    text-decoration: underline;
+}
+
+/* хеадер о газпроме */
+.wrapper__aboutgp{
+    background: url('../img/layered-waves-haikei-nakubani.svg') no-repeat;
+    background-position: bottom;
+    background-size:cover;
+    background-position-y: 100px;
+}
+
+.header__aboutgp {
+    background-color: white;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 100%, rgba(255, 255, 255, 0) 80%), url('../img/back-aboutgp.jpg') no-repeat center;
+    background-size: cover;
+    background-position-y: 75%;
+    padding: 45px 0 20vh 0;
+}
+
+.header__aboutgp__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    transform: translateY(-15px);
+}
+
+.header__aboutgp__list {
+    display: flex;
+    font-weight: 300;
+}
+
+.header__about__gp__list__item {
+    font-size: 18px;
+    margin-right: 25px;
+}
+
+.header__about__gp__list__item a{
+    color: white;
+}
+
+.header__about__gp__list__item:hover a{
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.header__about__gp__list__item:last-child{
+    margin: 0;
+}
+
+.header__aboutgp__hi__block{
+    text-align-last: left;
+}
+
+.header__aboutgp__list.second{
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.header__aboutgp__list__item.second a{
+    color: white;
+}
+
+.header__aboutgp__list__item.second {
+    font-size: 18px;
+    margin-right: 25px;
+}
+
+.header__aboutgp__list__item.second:last-child{
+    margin: 0;
+}
+
+.aboutgp__title{
+    font-size: 92px;
+    color: white;
+}
+
+/* мейн о газпроме */
+.main__aboutgp {
+    margin-top: -100px;
+}
+
+.aboutgp {
+    font-weight: 300;
+    padding: 0 0 150px 0;
+}
+
+.aboutgp__text__title {
+    text-align: center;
+    line-height: 1.5;
+    font-size: 22px;
+    margin-bottom: 100px;
+    font-weight: 500;
+    color: white;
+}
+
+.aboutgp__info__content {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 0 0 150px 0;
+}
+
+.aboutgp__info__text {
+    margin-left: 20px;
+}
+.aboutgp__info__text__paragraph {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-bottom: 25px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.aboutgp__img__block {
+    max-width: 520px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider__line{
+    display: flex;
+    transition: all 3s;
+}
+
+.aboutgp__img {
+    text-align: center;
+    margin: 0 20px 0 0;
+}
+
+.aboutgp__img img{
+    max-width: 500px;
+    height: 360px;
+}
+
+.aboutgp__img__text {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #777777;
+}
+
+.slider__btn__next {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    width: 45%;
+}
+
+.slider__btn__prev {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    width: 45%;
+}
+
+.aboutgp__paragraph {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 50px;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.aboutgp__paragraph.rigth{
+    text-align: right;
+    margin-left: auto;
+}
+
+/* соц сети о газпроме */
+.aboutgp__social {
+    padding-bottom: 30px;
+}
+
+.aboutgp__social__text {
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    color: white;
+}
+
+.aboutgp__social__list {
+    display: flex;
+    margin-left: 15px;
+}
+
+.aboutgp__social__list__item {
+    margin-right: 20px;
+}
+
+.aboutgp__social__list__item:last-child{
+    margin: 0;
+}
+
+/* футер о газпроме */
+.footer__aboutgp__text {
+    color: white;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 15px 0;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.footer__aboutgp__text a{
+    color: #b9b9b9;
+}
+
+.footer__aboutgp__text a:hover{
+    text-decoration: underline;
+}
+
+/* хеадер стратегия */
+.wrapper__strategy {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(180deg, rgba(249,246,241,0) 10%, rgba(0,0,0,0.5011381261488971) 80%), url('../img/back-strategy.jpg') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-weight: 300;
+}
+
+.header__strategy{
+    text-align: right;
+    padding: 15px 0 83px 0;
+}
+
+.header__strategy__logo{
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.back__link.start span{
+    color: white;
+}
+
+.back__link.start span,
+.back__link.start a{
+    display: inline-block;
+}
+
+.loader {
+    position: fixed;
+    width: 100%;
+}
+.loader-1 {
+    background-color: white;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -100;
+}
+
+.loader-1__image img{
+    width: 600px;
+    transform: translateY(-100px);
+}
+
+.loader-2 {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #006BB6;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+/* мейн стратегия */
+.strategy {
+    margin-bottom: 150px;
+}
+
+.strategy__title {
+    font-size: 42px;
+    font-weight: 500;
+    color: white;
+}
+
+.strategy__info__paragraph {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    line-height: 1.5;
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.strategy__more__link {
+    padding: 15px 0 45px 0
+}
+
+.strategy__more__list {
+    display: flex;
+}
+
+.strategy__more__list__item {
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+.strategy__more__list__item a{
+    color: #006BB6;
+}
+
+.strategy__more__list__item a:hover{
+    text-decoration: underline;
+}
+
+/* соц сети стратегия */
+.strategy__social {
+    margin-bottom: 30px;
+}
+
+.strategy__social__text {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.strategy__social__list {
+    display: flex;
+    margin-left: 15px;
+}
+
+.strategy__social__list__item {
+    margin-right: 20px;
+}
+
+.strategy__social__list__item:last-child{
+    margin: 0;
+}
+
+/* футер стратегия */
+.footer__strategy {
+    margin-top: auto;
+}
+
+.footer__strategy_text {
+    line-height: 1.5;
+    color: white;
+    padding: 15px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.footer__strategy_text a{
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer__strategy_text a:hover{
+    text-decoration: underline;
+}
+
+/* хеадер производство */
+.header__create {
+    text-align: right;
+    padding: 15px 0 15px 0;
+    z-index: 22;
+    position: absolute;
+    right: 15%;
+    top: 0;
+}
+
+.header__create__logo {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+.back__link.create span {
+    color: white;
+}
+
+/* мейн производство */
+.main__create {
+    font-weight: 300;
+}
+
+.section.first{
+    background:linear-gradient(180deg, rgba(249,246,241,0) 0%, rgba(0,0,0,0.7) 0%), url('../img/yamburgskoye.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.section.second{
+    background:linear-gradient(180deg, rgba(249,246,241,0) 0%, rgba(0,0,0,0.7) 0%), url('../img/ks-in-stavropol.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.section.third{
+    background:linear-gradient(180deg, rgba(249,246,241,0) 0%, rgba(0,0,0,0.7) 0%), url('../img/zavod-im-chernomirdina.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.section.fourth{
+    background:linear-gradient(180deg, rgba(249,246,241,0) 0%, rgba(0,0,0,0.7) 0%), url('../img/w1100_adlerskaya-tes.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.main__create__title {
+    font-size: 42px;
+    margin-bottom: 30px;
+    color: white;
+    font-weight: 500;
+}
+
+.create__info__paragraph {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    line-height: 1.5;
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+#pp-nav li a span{
+    background: rgba(255, 255, 255, 0.733);
+    border: none;
+    width: 13px;
+    height: 13px;
+    transition: .2s;
+}
+
+#pp-nav li a.active span{
+    background: #006BB6;
+}
+
+/* соц сети производство */
+.create__social__text {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 30px 0;
+}
+.create__social__list {
+    display: flex;
+    margin-left: 20px;
+}
+
+.create__social__list__item {
+    margin-right: 15px;
+}
+
+.create__social__list__item:last-child{
+    margin: 0;
+}
+
+/* футер производство */
+.footer__create {
+    margin-top: auto;
+}
+
+.footer__create__text {
+    line-height: 1.5;
+    color: white;
+    padding: 15px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.footer__create__text a{
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer__create__text a:hover{
+    text-decoration: underline;
+}
+
+/* хеадер газовый бизнес */
+.wrapper__gaseous{
+    background: url('../img/circle-scatter-haikei.svg') no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.header__gaseous {
+    text-align: right;
+    padding: 15px 0 83px 0;
+}
+
+.header__gaseous__logo {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* мейн газовый бизнес */
+.main__gaseous {
+    font-weight: 300;
+}
+
+.gaseous__hi {
+    padding-bottom: 75px;
+}
+
+.gaseous__hi__title {
+    font-size: 56px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.gaseous__hi__paragraph {
+    line-height: 1.5;
+    font-size: 22px;
+}
+
+.gaseous__exploration {
+    padding-bottom: 75px;
+}
+
+.gaseous__exploration__first {
+    padding-bottom: 75px;
+}
+
+.gaseous__exploration__title {
+    font-size: 42px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.gaseous__exploration__list__text {
+    font-size: 22px;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+.gaseous__exploration__list__item:before{
+    content: "— ";
+    font-weight: 400;
+    left: 0;
+}
+
+.gaseous__exploration__list__item {
+    margin-left: 30px;
+}
+
+.gaseous__exploration__image{
+    position: relative;
+}
+
+.gaseous__exploration__img{
+    width: 100%;
+    transition: 1s;
+    box-shadow: rgba(0, 106, 182, 0.24) 0px 15px 30px -5px;
+    border-radius: 10px;
+}
+
+.gaseous__exploration__img__text{
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    color: white;
+    opacity: 0;
+    transition: .8s;
+}
+
+.gaseous__exploration__image:hover .gaseous__exploration__img__text{
+    opacity: 1;
+}
+
+.gaseous__exploration__image:hover .gaseous__exploration__img{
+    filter: brightness(55%);
+}
+
+.gaseous__supply {
+    padding-bottom: 150px;  
+}
+
+.gaseous__supply__title {
+    font-size: 42px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.gaseous__supply__first {
+    padding-bottom: 75px
+}
+
+.gaseous__supply__text__list {
+    font-size: 22px;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+.gaseous__supply__list__item:before{
+    content: "— ";
+    font-weight: 400;
+    left: 0;
+}
+
+.gaseous__supply__list__item {
+    margin-left: 30px;
+}
+
+.gaseous__supply__image {
+    position: relative;
+}
+
+.gaseous__supply__img {
+    width: 100%;
+    transition: 1s;
+    box-shadow: rgba(0, 106, 182, 0.24) 0px 15px 30px -5px;
+    border-radius: 10px;
+}
+.gaseous__supply__image__text {
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    color: white;
+    opacity: 0;
+    transition: .8s;
+    color: white;
+}
+
+.gaseous__supply__image:hover .gaseous__supply__image__text {
+    opacity: 1;
+}
+
+.gaseous__supply__image:hover .gaseous__supply__img{
+    filter: brightness(55%);
+}
+
+/* соц сети газовый бизнес */
+.gaseous__social__link {
+    padding-bottom: 30px;
+}
+
+.gaseous__social__text {
+    display: flex;
+    align-items: center;
+}
+
+.gaseous__social__list {
+    display: flex;
+    margin-left: 15px;
+}
+
+.gaseous__social__list__item {
+    margin-right: 20px;
+}
+
+.gaseous__social__list__item:last-child{
+    margin: 0;
+}
+
+/* футер газовый бизнес */
+.footer__gaseous {
+    font-weight: 300;
+}
+
+.footer__gaseous__text {
+    line-height: 1.5;
+    padding: 15px 0;
+    border-top: 1px solid #e1e1e1;
+}
+
+.footer__gaseous__text a{
+    color: #006BB6;
+}
+
+.footer__gaseous__text a:hover{
+    text-decoration: underline;
+}

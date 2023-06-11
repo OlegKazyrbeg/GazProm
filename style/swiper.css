@@ -1,0 +1,36 @@
+.swiper {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.swiper__wrapper{
+    position: relative;
+    width: 500%;
+    animation: animate 25s infinite;
+}
+
+@keyframes animate{
+    0%{left:0%;}
+    9%{left:0%;}
+    18%{left:-100%;}
+    27%{left:-100%;}
+    36%{left:-200%;}
+    45%{left:-200%;}
+    54%{left:-300%;}
+    63%{left:-300%;}
+    70%{left:0%}
+    100%{left:0%}
+}
+
+.swiper-slide{
+    float: left;
+    width: 20%;
+    height: 100vh;
+    filter: brightness(30%);
+    float: left;
+}
